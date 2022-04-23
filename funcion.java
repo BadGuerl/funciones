@@ -1,19 +1,30 @@
+package com.company;
+
 public class Main {
 
     public static void main(String[] args) {
-        int param1 = 20;
-        int param2 = 15;
+        suma(20, 40, 60);
 
-        suma(param1, param2);
+        Coche miCoche = new Coche();
 
-        System.out.println(suma);
+        miCoche.sumarPuertas();
+        miCoche.sumarPuertas();
+        System.out.println("El numero de puertas es: " + miCoche.numeroDePuertas);
+
     }
 
-    public static void suma(int a, int b) {
+    public static void suma(int a, int b, int c){
         int resultado;
-        resultado = a + b;
-
+        resultado = a + b + c;
         System.out.println(resultado);
     }
+}
 
+class Coche {
+    public int numeroDePuertas = 4;
+
+    public void sumarPuertas(){
+
+        this.numeroDePuertas++;
+    }
 }
